@@ -31,13 +31,13 @@
 				<el-form  :inline="true" :model="tableSearchModel" ref="tableSearchModel" label-width="100px">
 					<el-row>
 						<el-form-item label="NAMESPACES">
-							<el-input v-model="tableSearchModel.namespace" placeholder="输入域名空间" size="15"></el-input>
+							<el-input v-model="tableSearchModel.namespace" placeholder="如：ns1" size="15"></el-input>
 						</el-form-item>
 						<el-form-item label="POD NAME">
-							<el-input v-model="tableSearchModel.podname" placeholder="输入POD NAME" size="35"></el-input>
+							<el-input v-model="tableSearchModel.podname" placeholder="如：nm-1" size="35"></el-input>
 						</el-form-item>
 						<el-form-item label="IP">
-							<el-input v-model="tableSearchModel.ip" placeholder="输入IP" size="25"></el-input>
+							<el-input v-model="tableSearchModel.ip" placeholder="如：172.20.64.17/18" size="25"></el-input>
 						</el-form-item>
 						<el-form-item label="状态">
 							<el-select v-model="tableSearchModel.status" placeholder="请选择状态" size="10">

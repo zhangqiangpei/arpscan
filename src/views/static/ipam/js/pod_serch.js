@@ -15,7 +15,7 @@ var	index= new Vue({
         },
         statusSet:[{
             value: null,
-            label: ''
+            label: '全部'
         },{
             value: 1,
             label: '使用中'

@@ -1,0 +1,9 @@
+{
+  "address": "172.20.0.68",
+  "port": 3306,
+  "dbName": "ipallcator",
+  "user": "macmanage",
+  "password": "QWert@163.com",
+  "maxConn": 500,
+  "maxIdle": 50
+}

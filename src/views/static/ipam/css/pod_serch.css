@@ -1,0 +1,42 @@
+  .el-table .a1-row {
+    background: #ea9999;
+  }
+
+  .el-table .a2-row {
+    background: #ffe599;
+  }
+  .el-table .a3-row {
+      background: #f7e7e7;
+  }
+
+  .el-table .a4-row {
+      background: #ffffff;
+  }
+  .el-header{
+      text-align: center;
+      line-height: 30px;
+  }
+  .el-footer {
+      color: #333;
+      text-align: center;
+  }
+
+  .el-aside {
+      color: #333;
+      text-align: center;
+      background-color: #B3C0D1;
+  }
+
+  .el-main {
+      color: #333;
+      text-align: center;
+
+  }
+
+
+  .el-row {
+      margin-bottom: 15px;
+  }
+  .el-col {
+      border-radius: 50px;
+  }

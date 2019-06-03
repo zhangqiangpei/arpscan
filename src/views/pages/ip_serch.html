@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>IP/MAC查询</title>
+    <link rel="stylesheet" href="https://unpkg.com/element-ui@2.0.11/lib/theme-chalk/index.css" />
+    <link rel="stylesheet" href="../static/ipam/css/pod_serch.css" />
+</head>
+
+<body>
+
+<div id="main">
+    <el-container>
+        <el-aside width="150px" style="background-color: rgb(255,255,255)">
+            <el-menu :default-openeds="['1', '3']">
+                <el-menu-item-group>
+                    <el-menu-item index="1-1">
+                        IP/MAC查询
+                    </el-menu-item>
+                    <el-menu-item index="1-2">
+                        <a href="index.html"> IP/POD NAME查询 </a>
+                    </el-menu-item>
+                </el-menu-item-group>
+            </el-menu>
+        </el-aside>
+        <el-container>
+            <el-header style='height: 120px;'>
+                <el-form  :inline="true" :model="tableSearchModel" ref="tableSearchModel" label-width="100px">
+                    <el-row>
+                        <el-form-item label="IP">
+                            <el-input v-model="tableSearchModel.ip" placeholder="输入IP" size="35"></el-input>
+                        </el-form-item>
+                        <el-form-item>
+                            <el-button type="primary" @click="searchClick" size="small">查 询</el-button>
+                        </el-form-item>
+                    </el-row>
+                </el-form>
+            </el-header>
+            <el-main style='height: 400px;'>
+                <el-table
+                        :data="tableData"
+                        style="width: 100%"
+                        height="537"
+                        border
+                        :row-class-name="tableRowClassName">
+
+                    <el-table-column
+                            prop="ID"
+                            label="ID"
+                            width="150">
+                    </el-table-column>
+                    <el-table-column
+                            prop="Ip"
+                            label="Ip"
+                            width="200">
+                    </el-table-column>
+                    <el-table-column
+                            prop="Mac"
+                            label="Mac"
+                            width="500">
+                    </el-table-column>
+                    <el-table-column
+                            prop="CreatedAt"
+                            label="CreatedAt"
+                            width="500">
+                    </el-table-column>
+                </el-table>
+
+            </el-main>
+
+            <!-- <el-pagination
+                     @size-change="handleSizeChange"
+                     @current-change="handleCurrentChange"
+                     :current-page="tableSearchModel.page"
+                     :page-sizes="[6, 20, 50]"
+                     :page-size="tableSearchModel.size"
+                     layout="total, sizes, prev, pager, next, jumper"
+                     :total="totalElements">
+             </el-pagination>
+         </el-footer> -->
+        </el-container>
+        <!--<el-aside width="100px">-->
+        <!--</el-aside>-->
+    </el-container>
+</div>
+<script type="text/javascript" src="../static/frame/js/vue.js" ></script>
+<script type="text/javascript" src="../static/frame/js/index.js" ></script>
+<script type="text/javascript" src="../static/frame/js/jquery.min.js" ></script>
+<script type="text/javascript" src="../static/ipam/js/ip_serch.js" ></script>
+</body>
+</html>

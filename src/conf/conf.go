@@ -10,6 +10,7 @@ import (
 var mySQLConfig MySQLConfig
 
 type MySQLConfig struct {
+	ApiPort  int    `json: "apiPort"`
 	Address  string `json: "address"`
 	Port     int    `json: "port"`
 	DBName   string `json: "dbName"`
